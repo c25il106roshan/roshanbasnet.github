@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Roshan Basnet | IT Student Portfolio</title>
+<title>Roshan Basnet | IT Portfolio</title>
 
 <style>
 * {
@@ -17,51 +17,69 @@ scroll-behavior: smooth;
 body {
 font-family: Arial, sans-serif;
 background: #f5f7fb;
-color: #222;
+color: #1f2937;
 line-height: 1.6;
 }
 
+/* NAVIGATION */
 header {
-background: #111827;
-color: white;
-padding: 20px 8%;
+position: sticky;
+top: 0;
+z-index: 1000;
+background: rgba(17, 24, 39, 0.95);
+padding: 18px 7%;
 display: flex;
 justify-content: space-between;
 align-items: center;
-position: sticky;
-top: 0;
-z-index: 100;
 }
 
-header h2 {
+.logo {
 color: #60a5fa;
+font-size: 24px;
+font-weight: bold;
 }
 
 nav a {
 color: white;
 text-decoration: none;
-margin-left: 20px;
+margin-left: 22px;
 font-size: 15px;
+transition: 0.3s;
 }
 
 nav a:hover {
 color: #60a5fa;
 }
 
+/* HERO */
 .hero {
-min-height: 90vh;
+min-height: 92vh;
 display: flex;
-align-items: center;
 justify-content: center;
+align-items: center;
 text-align: center;
 padding: 40px 20px;
-background: linear-gradient(135deg, #111827, #2563eb);
 color: white;
+background: linear-gradient(135deg, #111827, #2563eb);
+}
+
+.hero-content {
+animation: fadeUp 1.2s ease;
+}
+
+.profile-photo {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+border: 5px solid white;
+margin-bottom: 20px;
+background: #dbeafe;
 }
 
 .hero h1 {
 font-size: 52px;
-margin-bottom: 15px;
+margin-bottom: 10px;
 }
 
 .hero h1 span {
@@ -70,61 +88,111 @@ color: #93c5fd;
 
 .hero p {
 font-size: 20px;
-margin-bottom: 25px;
+margin-bottom: 28px;
 }
 
 .button {
 display: inline-block;
-padding: 12px 25px;
+padding: 13px 28px;
 background: white;
 color: #2563eb;
-text-decoration: none;
 border-radius: 30px;
+text-decoration: none;
 font-weight: bold;
+transition: 0.3s;
 }
 
+.button:hover {
+transform: scale(1.05);
+}
+
+/* SECTIONS */
 section {
-padding: 70px 10%;
+padding: 80px 8%;
 }
 
 section h2 {
 text-align: center;
-margin-bottom: 35px;
-font-size: 32px;
+font-size: 34px;
+margin-bottom: 40px;
 color: #111827;
 }
 
 .about {
-max-width: 800px;
+max-width: 850px;
 margin: auto;
 text-align: center;
 font-size: 18px;
 }
 
+/* SKILLS */
+.skills {
+max-width: 850px;
+margin: auto;
+}
+
+.skill {
+margin-bottom: 22px;
+}
+
+.skill-title {
+display: flex;
+justify-content: space-between;
+margin-bottom: 7px;
+font-weight: bold;
+}
+
+.bar {
+width: 100%;
+height: 12px;
+background: #e5e7eb;
+border-radius: 20px;
+overflow: hidden;
+}
+
+.progress {
+height: 100%;
+border-radius: 20px;
+background: linear-gradient(90deg, #2563eb, #60a5fa);
+animation: grow 1.5s ease;
+}
+
+.html { width: 80%; }
+.css { width: 70%; }
+.javascript { width: 45%; }
+.java { width: 35%; }
+
+/* CARDS */
 .cards {
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-gap: 20px;
+gap: 25px;
 }
 
 .card {
 background: white;
-padding: 25px;
-border-radius: 15px;
+padding: 30px;
+border-radius: 18px;
 text-align: center;
-box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 transition: 0.3s;
 }
 
 .card:hover {
-transform: translateY(-8px);
+transform: translateY(-10px);
 }
 
 .card h3 {
-margin-bottom: 10px;
 color: #2563eb;
+margin-bottom: 12px;
 }
 
+.project-icon {
+font-size: 45px;
+margin-bottom: 15px;
+}
+
+/* GOAL */
 .goal {
 background: #111827;
 color: white;
@@ -135,29 +203,86 @@ text-align: center;
 color: white;
 }
 
+.goal p {
+max-width: 800px;
+margin: auto;
+font-size: 18px;
+}
+
+/* CONTACT */
 .contact {
 text-align: center;
 }
 
+.social-buttons {
+margin-top: 25px;
+}
+
+.social-buttons a {
+display: inline-block;
+margin: 8px;
+padding: 12px 22px;
+border-radius: 25px;
+background: #111827;
+color: white;
+text-decoration: none;
+transition: 0.3s;
+}
+
+.social-buttons a:hover {
+background: #2563eb;
+transform: translateY(-3px);
+}
+
+/* FOOTER */
 footer {
 background: #111827;
 color: white;
 text-align: center;
-padding: 20px;
+padding: 25px;
 }
 
+/* ANIMATIONS */
+@keyframes fadeUp {
+from {
+opacity: 0;
+transform: translateY(30px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes grow {
+from {
+width: 0;
+}
+}
+
+/* MOBILE */
 @media (max-width: 700px) {
+
 header {
 flex-direction: column;
-gap: 10px;
+gap: 12px;
+}
+
+nav {
+text-align: center;
 }
 
 nav a {
 margin: 5px;
+display: inline-block;
 }
 
 .hero h1 {
 font-size: 38px;
+}
+
+.hero p {
+font-size: 17px;
 }
 }
 </style>
@@ -165,120 +290,282 @@ font-size: 38px;
 
 <body>
 
+<!-- NAVIGATION -->
 <header>
-<h2>Roshan Basnet</h2>
+<div class="logo">Roshan Basnet</div>
 
 <nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
 <a href="#hobby">Hobby</a>
 <a href="#goal">Goal</a>
 <a href="#contact">Contact</a>
 </nav>
 </header>
 
+
+<!-- HERO -->
 <section class="hero">
-<div>
+
+<div class="hero-content">
+
+<!-- Photo पछि यहाँ राख्न सकिन्छ -->
+<img
+class="profile-photo"
+src="https://via.placeholder.com/150"
+alt="Roshan Basnet">
+
 <h1>Hello, I'm <span>Roshan</span></h1>
-<p>IT Student | Future Web Developer | Programmer</p>
-<a class="button" href="#about">Explore My Portfolio</a>
+
+<p>
+IT Student • Future Developer • Photographer
+</p>
+
+<a class="button" href="#about">
+Explore My Portfolio
+</a>
+
 </div>
+
 </section>
 
+
+<!-- ABOUT -->
 <section id="about">
+
 <h2>About Me</h2>
 
 <div class="about">
+
 <p>
-Hello! My name is Roshan Basnet. I am from Nepal and currently
-living in Osaka, Japan. I am studying IT at Nara Computer
-Senmon Gakko. I am interested in programming, web development
-and technology.
+Hello! My name is Roshan Basnet. I am from Nepal and
+currently living in Osaka, Japan. I am studying IT at
+Nara Computer Senmon Gakko.
 </p>
+
+<br>
+
+<p>
+I am interested in programming, web development and
+modern technology. My goal is to become a professional
+IT engineer in Japan.
+</p>
+
 </div>
+
 </section>
 
+
+<!-- SKILLS -->
 <section id="skills">
+
 <h2>My Skills</h2>
 
+<div class="skills">
+
+<div class="skill">
+<div class="skill-title">
+<span>HTML</span>
+<span>80%</span>
+</div>
+
+<div class="bar">
+<div class="progress html"></div>
+</div>
+</div>
+
+
+<div class="skill">
+<div class="skill-title">
+<span>CSS</span>
+<span>70%</span>
+</div>
+
+<div class="bar">
+<div class="progress css"></div>
+</div>
+</div>
+
+
+<div class="skill">
+<div class="skill-title">
+<span>JavaScript</span>
+<span>45%</span>
+</div>
+
+<div class="bar">
+<div class="progress javascript"></div>
+</div>
+</div>
+
+
+<div class="skill">
+<div class="skill-title">
+<span>Java</span>
+<span>35%</span>
+</div>
+
+<div class="bar">
+<div class="progress java"></div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+<h2>My Projects</h2>
+
 <div class="cards">
 
 <div class="card">
-<h3>HTML</h3>
-<p>Creating websites and web pages.</p>
+
+<div class="project-icon">🌐</div>
+
+<h3>Personal Website</h3>
+
+<p>
+A responsive personal portfolio website created
+using HTML and CSS.
+</p>
+
 </div>
+
 
 <div class="card">
-<h3>CSS</h3>
-<p>Designing beautiful and responsive websites.</p>
+
+<div class="project-icon">💻</div>
+
+<h3>Java Learning</h3>
+
+<p>
+Learning Java programming from the basics and
+building small programs.
+</p>
+
 </div>
+
 
 <div class="card">
-<h3>Java</h3>
-<p>Learning programming and application development.</p>
+
+<div class="project-icon">📚</div>
+
+<h3>IT Student Project</h3>
+
+<p>
+Exploring programming, algorithms and web
+development through school projects.
+</p>
+
 </div>
 
-<div class="card">
-<h3>JavaScript</h3>
-<p>Learning interactive web development.</p>
 </div>
 
-</div>
 </section>
 
+
+<!-- HOBBY -->
 <section id="hobby">
-<h2>My Hobby & Special Skill</h2>
+
+<h2>My Hobby & Special Skills</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>📷 Photography</h3>
+
+<div class="project-icon">📷</div>
+
+<h3>Photography</h3>
+
 <p>
-I enjoy taking photos and capturing beautiful moments.
+I enjoy taking photos and capturing beautiful
+moments.
 </p>
+
 </div>
+
 
 <div class="card">
-<h3>🚲 Cycling</h3>
+
+<div class="project-icon">🚲</div>
+
+<h3>Cycling</h3>
+
 <p>
-On holidays, I like travelling by bicycle and enjoying nature.
+I like travelling by bicycle and enjoying
+beautiful nature.
 </p>
+
 </div>
+
 
 <div class="card">
-<h3>🎬 Video Editing</h3>
+
+<div class="project-icon">🎬</div>
+
+<h3>Video Editing</h3>
+
 <p>
-I am interested in making and editing videos.
+I am interested in creating and editing videos.
 </p>
+
 </div>
 
 </div>
+
 </section>
 
+
+<!-- GOAL -->
 <section id="goal" class="goal">
+
 <h2>My Future Goal</h2>
 
 <p>
 My goal is to become a professional IT engineer.
-I want to improve my programming skills and work for
-a good IT company in Japan after graduation.
+I want to improve my programming skills and work
+for a good IT company in Japan after graduation
+in 2028.
 </p>
+
 </section>
 
+
+<!-- CONTACT -->
 <section id="contact" class="contact">
+
 <h2>Contact Me</h2>
 
 <p>
 Thank you for visiting my portfolio website!
 </p>
 
-<p>
-📍 Osaka, Japan
-</p>
+<div class="social-buttons">
+
+<!-- आफ्नो वास्तविक links पछि राख्ने -->
+<a href="#" target="_blank">GitHub</a>
+
+<a href="#" target="_blank">Instagram</a>
+
+<a href="#" target="_blank">LinkedIn</a>
+
+</div>
+
 </section>
 
+
+<!-- FOOTER -->
 <footer>
-<p>© 2026 Roshan Basnet. All Rights Reserved.</p>
+
+<p>
+© 2026 Roshan Basnet | IT Student Portfolio
+</p>
+
 </footer>
 
 </body>
