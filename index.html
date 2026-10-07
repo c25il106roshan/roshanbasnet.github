@@ -1,54 +1,164 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roshan Basnet</title>
+
+<title>Roshan Basnet | IT Student Portfolio</title>
 
 <style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+scroll-behavior: smooth;
+}
+
 body {
 font-family: Arial, sans-serif;
-margin: 0;
-background: #f5f5f5;
-color: #333;
+background: #f5f7fb;
+color: #222;
+line-height: 1.6;
 }
 
 header {
-background: #222;
+background: #111827;
 color: white;
-text-align: center;
-padding: 50px 20px;
+padding: 20px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 100;
 }
 
-header h1 {
-font-size: 40px;
-margin-bottom: 10px;
+header h2 {
+color: #60a5fa;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+margin-left: 20px;
+font-size: 15px;
+}
+
+nav a:hover {
+color: #60a5fa;
+}
+
+.hero {
+min-height: 90vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 40px 20px;
+background: linear-gradient(135deg, #111827, #2563eb);
+color: white;
+}
+
+.hero h1 {
+font-size: 52px;
+margin-bottom: 15px;
+}
+
+.hero h1 span {
+color: #93c5fd;
+}
+
+.hero p {
+font-size: 20px;
+margin-bottom: 25px;
+}
+
+.button {
+display: inline-block;
+padding: 12px 25px;
+background: white;
+color: #2563eb;
+text-decoration: none;
+border-radius: 30px;
+font-weight: bold;
 }
 
 section {
-max-width: 900px;
-margin: 30px auto;
-padding: 30px;
-background: white;
-border-radius: 15px;
+padding: 70px 10%;
 }
 
-h2 {
-color: #333;
-border-bottom: 2px solid #ddd;
-padding-bottom: 10px;
+section h2 {
+text-align: center;
+margin-bottom: 35px;
+font-size: 32px;
+color: #111827;
 }
 
-p {
+.about {
+max-width: 800px;
+margin: auto;
+text-align: center;
 font-size: 18px;
-line-height: 1.8;
+}
+
+.cards {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+
+.card {
+background: white;
+padding: 25px;
+border-radius: 15px;
+text-align: center;
+box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-8px);
+}
+
+.card h3 {
+margin-bottom: 10px;
+color: #2563eb;
+}
+
+.goal {
+background: #111827;
+color: white;
+text-align: center;
+}
+
+.goal h2 {
+color: white;
+}
+
+.contact {
+text-align: center;
 }
 
 footer {
-text-align: center;
-padding: 30px;
-background: #222;
+background: #111827;
 color: white;
+text-align: center;
+padding: 20px;
+}
+
+@media (max-width: 700px) {
+header {
+flex-direction: column;
+gap: 10px;
+}
+
+nav a {
+margin: 5px;
+}
+
+.hero h1 {
+font-size: 38px;
+}
 }
 </style>
 </head>
@@ -56,46 +166,119 @@ color: white;
 <body>
 
 <header>
-<h1>Roshan Basnet</h1>
-<p>私のホームページへようこそ！</p>
+<h2>Roshan Basnet</h2>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#hobby">Hobby</a>
+<a href="#goal">Goal</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-<section>
-<h2>自己紹介</h2>
+<section class="hero">
+<div>
+<h1>Hello, I'm <span>Roshan</span></h1>
+<p>IT Student | Future Web Developer | Programmer</p>
+<a class="button" href="#about">Explore My Portfolio</a>
+</div>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+
+<div class="about">
 <p>
-私はネパール出身のロサン・バスネットです。
-大阪に住んでいます。
-奈良コンピュータ専門学校でITを勉強しています。
+Hello! My name is Roshan Basnet. I am from Nepal and currently
+living in Osaka, Japan. I am studying IT at Nara Computer
+Senmon Gakko. I am interested in programming, web development
+and technology.
+</p>
+</div>
+</section>
+
+<section id="skills">
+<h2>My Skills</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>HTML</h3>
+<p>Creating websites and web pages.</p>
+</div>
+
+<div class="card">
+<h3>CSS</h3>
+<p>Designing beautiful and responsive websites.</p>
+</div>
+
+<div class="card">
+<h3>Java</h3>
+<p>Learning programming and application development.</p>
+</div>
+
+<div class="card">
+<h3>JavaScript</h3>
+<p>Learning interactive web development.</p>
+</div>
+
+</div>
+</section>
+
+<section id="hobby">
+<h2>My Hobby & Special Skill</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📷 Photography</h3>
+<p>
+I enjoy taking photos and capturing beautiful moments.
+</p>
+</div>
+
+<div class="card">
+<h3>🚲 Cycling</h3>
+<p>
+On holidays, I like travelling by bicycle and enjoying nature.
+</p>
+</div>
+
+<div class="card">
+<h3>🎬 Video Editing</h3>
+<p>
+I am interested in making and editing videos.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="goal" class="goal">
+<h2>My Future Goal</h2>
+
+<p>
+My goal is to become a professional IT engineer.
+I want to improve my programming skills and work for
+a good IT company in Japan after graduation.
 </p>
 </section>
 
-<section>
-<h2>私の趣味・特技</h2>
-<p>
-私の趣味は自転車でいろいろな場所へ行くことです。
-自然の中を歩いたり、きれいな景色を見たりすることが好きです。
-特技は写真を撮ることです。
-</p>
-</section>
+<section id="contact" class="contact">
+<h2>Contact Me</h2>
 
-<section>
-<h2>私の目標</h2>
 <p>
-将来、IT会社で働きたいです。
-プログラミングを勉強して、良いエンジニアになりたいです。
+Thank you for visiting my portfolio website!
 </p>
-</section>
 
-<section>
-<h2>私の学校生活</h2>
 <p>
-奈良コンピュータ専門学校でITについて勉強しています。
-Java、HTML、CSSなどを少しずつ勉強しています。
+📍 Osaka, Japan
 </p>
 </section>
 
 <footer>
-<p>© 2026 Roshan Basnet</p>
+<p>© 2026 Roshan Basnet. All Rights Reserved.</p>
 </footer>
 
 </body>
